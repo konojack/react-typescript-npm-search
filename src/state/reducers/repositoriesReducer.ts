@@ -7,8 +7,14 @@ interface RepositoriesState {
   error: string | null;
 }
 
+const initialState: RepositoriesState = {
+  data: [],
+  loading: false,
+  error: null,
+};
+
 const reducer = (
-  state: RepositoriesState,
+  state: RepositoriesState = initialState,
   action: Action
 ): RepositoriesState => {
   switch (action.type) {
